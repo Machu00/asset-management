@@ -1,0 +1,70 @@
+.btngroup {
+    margin-left: 500px;
+    margin-top: 97px;
+}
+
+body {    
+    background-size: cover;
+    background-image: url(../images/MoneyImage.jpg);
+    height:100%;
+}
+
+#search{
+    float: right;
+    margin-right: 50px;
+    width: 20%;
+    border-radius: 20px;
+    outline-style: none;
+    height: 3%;
+}
+
+#search-btn{
+    float: right;
+    height: 3%;
+    outline-style: none;
+    background-color: cornflowerblue;
+    border-radius: 17px;
+
+}
+.table {
+    text-align: center;
+    margin-top: 50px;
+}
+
+
+#update{
+    height: 30px;
+    background-color: mediumturquoise;
+    border-radius: 17px;
+    width: 20%;
+    outline: 0;
+    margin-right: 10%
+
+}
+
+#add{
+    height: 30px;
+    width: 20%;
+    background-color: mediumturquoise;
+    width: 20%;
+    border-radius: 17px;
+    outline: 0;
+}
+
+#header{
+    text-align: center;
+    font-style: Italic;
+    color: blanchedalmond;
+    font-size: 25px;
+}
+
+tr th{
+    color: gold;
+    font-size: 160%;
+    font-style: oblique
+}
+
+tr td{
+    color: white;
+    font-size: 25px;
+}

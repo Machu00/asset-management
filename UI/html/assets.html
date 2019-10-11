@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <title>
+Asset Management | Assets
+        </title>
+    <link rel="stylesheet" href="../css/assets.css">    </head>
+    <script src="../js/assets.js"></script>
+
+    <body>
+        <div class="back">
+            <h1 id="header">Asset Management Catalogue</h1>
+            <input type="search" placeholder="Search Asset Name" id="search">
+            <button id="search-btn">Search</button>
+    
+            <div>
+                <br> <!--Breaking space after search icon-->
+                <table style=" width:100%" class="table">
+                    <tr>  
+                        <th>Asset Name</th>
+                        <th>Class</th>
+                        <th>Stock Keeping Unit</th>
+                        <th>Description</th>
+                        <th>Asset Date</th>
+                    </tr>
+                    <tr>
+                        <td><div contenteditable="true">McLaren</div></td>
+                        <td><div contenteditable="true">Cars</div></td>
+                        <td><div contenteditable="true">30</div></td>  
+                        <td><div contenteditable="true">Cars</div></td>
+                        <td><div contenteditable="true">2019-08-30</div></td>
+                    </tr>
+    
+                    <tr>
+                        <td><div contenteditable="true">McLaren</div></td>
+                        <td><div contenteditable="true">Cars</div></td>
+                        <td><div contenteditable="true">30</div></td>  
+                        <td><div contenteditable="true">Cars</div></td> 
+                        <td> <div contenteditable="true">2019-08-30</div></td>
+                    </tr>
+    
+                    <tr>
+                        <td><div contenteditable="true" id="name">{{name}}</div></td>
+                        <td><div contenteditable="true" id="class">{{Cars}}</div></td>
+                        <td><div contenteditable="true" id="sku">{{SKU}}</div></td>  
+                        <td><div contenteditable="true" id="description">{{Description}}</div></td> 
+                        <td><div contenteditable="true" id="date">{{2019-08-30}}</div></td>
+                    </tr>
+                </table>   
+                <br>
+                <div class="btngroup">
+                        <button id="update">Update</button>
+                        <a href="./index.html"><button id="add">Add Asset</button></a>
+                </div>
+            </div>
+        </div>
+        
+    </body>
+</html>

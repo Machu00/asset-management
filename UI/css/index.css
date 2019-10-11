@@ -1,0 +1,97 @@
+body {
+    background-image: url(http://www.thebluediamondgallery.com/wooden-tile/images/asset.jpg);
+    background-size: cover;
+}  
+
+tr {
+    text-align: center;
+}
+
+#update {
+    margin-left: 550px;
+}
+
+h1 {
+margin-left: 450px;
+font-style: sans-serif;
+}
+
+.assetgroup {
+    margin-left: 400px;
+    margin-top: 30px;
+}
+
+#input {
+    margin-top: 20%;
+}
+
+#name {
+    margin-left: 4%;
+    width: 15%;
+    border-radius: 10px;
+    height: 30px;
+    outline: 0;
+    text-align: center;
+}
+
+#class {
+    margin-left: 2%;
+    border-radius: 10px;
+    width: 15%;
+    height: 30px;
+    outline: 0;
+    text-align: center;
+
+}
+
+#AssetDate {
+    border-radius: 10px;
+    margin-left: 2%;
+    width: 15%;
+    height: 30px;
+    outline: 0;
+    text-align: center;
+
+}
+
+#sku {
+    border-radius: 10px;
+    margin-left: 2%;
+    width: 15%;
+    height: 30px;
+    outline: 0;
+    text-align: center;
+
+}
+
+#description{
+    border-radius: 10px;
+    margin-left: 2%;
+    width: 15%;
+    height: 30px;
+    outline: 0;
+    text-align: center;
+
+}
+
+.assetgroup{
+    margin-top: 10%;
+}
+
+#asset{
+    height: 30px;
+    background-color: mediumturquoise;
+    border-radius: 17px;
+    width: 20%;
+    outline: 0;
+    margin-right: 10%
+}
+
+#add{
+    height: 30px;
+    width: 20%;
+    background-color: mediumturquoise;
+    width: 20%;
+    border-radius: 17px;
+    outline: 0;
+}
