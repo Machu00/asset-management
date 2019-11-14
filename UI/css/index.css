@@ -1,97 +1,280 @@
 body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    overflow: hidden;
+}
+
+#display {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    height: 100%;
+    width: 100%;
+}
+
+#imagePanel {
+    position: relative;
     background-image: url(http://www.thebluediamondgallery.com/wooden-tile/images/asset.jpg);
     background-size: cover;
-}  
+    width: 100%;
+    height: 100%;
+}
 
-tr {
+#topBorder {
+    margin: 0;
+    padding: 0;
+    height: 0.5em;
+    width: 100%;
+    background: #560712;
+}
+
+#arrow {
+    position: relative;
+    margin: 0;
+    width: 4.5%;
+    height: 5%;
+    background: #560712;
+    transform: translateX(53.3em);
+    border-bottom-left-radius: 4em;
+    border-bottom-right-radius: 4em;
+    text-align: center;
+    transition: 0.4s;
+}
+
+#arrow:hover,
+#arrow:focus {
+    background: #ffffff;
+}
+
+#invert:hover,
+#invert:focus {
+    color: #560712;
+    font-weight: bolder;
+}
+
+#invert {
+    display: block;
+    font-size: 3.5em;
+    color: #ffffff;
+    transform: rotateX(185deg) translateY(0.4em);
+    cursor: pointer;
+    transition: 0.4s;
+    animation: pulse 1.2s infinite linear;
+    -webkit-animation: pulse 1.2s infinite linear;
+}
+
+@keyframes pulse {
+    from {
+        font-weight: normal;
+    }
+    to {
+        font-weight: bolder;
+    }
+}
+
+@-webkit-keyframes pulse {
+    from {
+        font-weight: normal;
+    }
+    to {
+        font-weight: bolder;
+    }
+}
+
+.modal {
+    display: none;
+    top: 0;
+    background: #1a191981;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 10;
     text-align: center;
 }
 
-#update {
-    margin-left: 550px;
+#formPanel {
+    background: #f7f6f6;
+    height: 85%;
+    width: 45%;
+    z-index: 99;
+    top: 5em;
+    left: 31.5em;
+    text-align: center;
+    border-radius: 1em;
+    transform: translate(31em, 2em);
+    padding-top: 1em;
+    /* transition: ease-in; */
 }
 
-h1 {
-margin-left: 450px;
-font-style: sans-serif;
+#close {
+    float: right;
+    transform: translate(-0.25em, -0.25em);
+    font-size: 4em;
+    color: #560712;
+    cursor: pointer;
+    animation: pulse 1.2s infinite;
+    -webkit-animation: pulse 1.2s infinite;
 }
 
-.assetgroup {
-    margin-left: 400px;
-    margin-top: 30px;
+#close:hover,
+#close:focus {
+    color: #080808;
+}
+
+#imagePanel p {
+    position: relative;
+    display: inline-block;
+    color: #861818;
+    font-size: 6em;
+    transform: rotateZ(-19deg) translate(5em, 6.51em);
+}
+
+#imagePanel a {
+    text-decoration: none;
+    display: inline-block;
+    height: 6.6em;
+    width: 6.6em;
+    float: right;
+    transform: translate(-15em, 15em) rotateZ(-19deg);
+}
+
+#viewBtn {
+    display: block;
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+    padding: 0.6em;
+    /* top: 38em; */
+    font-size: 1.25em;
+    border-radius: 15em;
+    box-shadow: -2px 5px 4px 4px #560712;
+    border-color: #d12e2e;
+    background: #7c0000;
+    color: #ffffff;
+    transition: 0.5s;
+    animation: pulse 1.2s infinite;
+    -webkit-animation: pulse 1.2s infinite;
+}
+
+#viewBtn:hover,
+#viewBtn:focus {
+    box-shadow: -2px 5px 4px 5..5px #7c0000;
+    border-color: #560712;
+    background: #f7f6f6;
+    color: #560712;
+}
+
+
+/* #imagePanel {
+    background-image: url(http://www.thebluediamondgallery.com/wooden-tile/images/asset.jpg);
+    background-size: cover;
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    max-width: 100%;
+    height: 100%;
+    width: 75%;
+    position: relative;
 }
 
 #input {
-    margin-top: 20%;
-}
-
-#name {
-    margin-left: 4%;
-    width: 15%;
-    border-radius: 10px;
-    height: 30px;
-    outline: 0;
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    max-width: 100%;
+    width: 25%;
+    height: 100%;
+    padding-top: 2.5%;
+    position: relative;
     text-align: center;
+    background: #202433;
+    border-top-left-radius: 1em;
+    border-bottom-left-radius: 1em;
 }
 
-#class {
-    margin-left: 2%;
-    border-radius: 10px;
-    width: 15%;
-    height: 30px;
-    outline: 0;
-    text-align: center;
+#input:before {
+    width: 3.5em;
+    height: 5em;
+    background: #560712;
+    position: absolute;
+} */
 
+form {
+    text-align: inherit;
 }
 
-#AssetDate {
-    border-radius: 10px;
-    margin-left: 2%;
-    width: 15%;
-    height: 30px;
-    outline: 0;
-    text-align: center;
-
+input {
+    display: block;
+    margin-top: 0.85em;
+    margin-left: 17.5%;
+    /* margin-right: 50%; */
+    padding: 0.8em;
+    width: 65%;
+    font-size: 1.35em;
+    border-radius: 1em;
+    color: #902c2c;
 }
 
-#sku {
-    border-radius: 10px;
-    margin-left: 2%;
-    width: 15%;
-    height: 30px;
-    outline: 0;
-    text-align: center;
-
+#send {
+    width: 25%;
+    background: #560712;
+    color: #ffffff;
 }
 
-#description{
-    border-radius: 10px;
-    margin-left: 2%;
-    width: 15%;
-    height: 30px;
-    outline: 0;
-    text-align: center;
-
+#send:hover,
+#send:focus {
+    background: #ffffff;
+    color: #560712;
+    font-weight: bold;
 }
 
-.assetgroup{
-    margin-top: 10%;
+h1 {
+    margin-bottom: 0.1em;
+    font-size: 3em;
+    margin-bottom: 1em;
+    color: rgb(98, 116, 173);
 }
 
-#asset{
-    height: 30px;
-    background-color: mediumturquoise;
-    border-radius: 17px;
-    width: 20%;
-    outline: 0;
-    margin-right: 10%
+.btnGroup {
+    margin-top: 2em;
+    position: relative;
+    display: flex;
+    padding-left: 30%;
 }
 
-#add{
-    height: 30px;
-    width: 20%;
-    background-color: mediumturquoise;
-    width: 20%;
-    border-radius: 17px;
-    outline: 0;
+.btn {
+    display: block;
+    padding: 0;
+    font-size: 1.25em;
+    padding: 0.7em;
+    width: 100%;
+    border-radius: 1em;
+    background-color: #983d1d;
+    color: #ffffff;
+    transition: 0.8s;
+    border-color: #983d1d;
+}
+
+.right {
+    margin-left: 0.6em;
+}
+
+.btnGroup a {
+    width: 30%;
+    padding: 0;
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.btn:hover,
+.btn:focus {
+    background: #ffffff;
+    color: #560712;
+    border-color: #ffffff;
 }

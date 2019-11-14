@@ -8,8 +8,19 @@
 
 //var AssetName = document.getElementById('name').value;  Added the variable to the function as a local variable
 
+function openModal() {
+    $('#topBorder').slideUp();
+    $('.modal').fadeIn();
+}
 
-function showMessage(){
+function hideModal() {
+    $('form').trigger("reset");
+    $('.modal').fadeOut();
+    $('#topBorder').slideDown('slow');
+
+}
+
+function showMessage() {
     var AssetName = document.getElementById('name').value;
     var AssetSKU = document.getElementById('sku').value;
     var AssetDescription = document.getElementById('description').value;
@@ -20,10 +31,10 @@ function showMessage(){
     alert(`Hello Rexford , you added ${AssetName} + ${AssetClass} + ${AssetDate}`);
 }
 
-onclick.getElementById('add').showMessage();
+// onclick.getElementById('add').showMessage();
 
 
-function AddAsset(){
+function AddAsset() {
     var AssetName = document.getElementById('name').value;
     var AssetSKU = document.getElementById('sku').value;
     var AssetDescription = document.getElementById('description').value;
@@ -36,22 +47,22 @@ function AddAsset(){
 
 
 fetch('people.json')
-  .then(function (response) {
-    return response.json();
-  })
-  .then(function (data) {
-    appendData(data);
-  })
-  .catch(function (err) {
-    console.log(err);
-  });
+    .then(function(response) {
+        return response.json();
+    })
+    .then(function(data) {
+        appendData(data);
+    })
+    .catch(function(err) {
+        console.log(err);
+    });
 
 
 
-  for(var i = 0; i < data.length; i++){
-      //append each person to our page 
-      alert('For loop working');
-  }
+for (var i = 0; i < data.length; i++) {
+    //append each person to our page 
+    alert('For loop working');
+}
 
 
 
@@ -67,8 +78,6 @@ var maincontainer = document.getElementById('data');
 maincontainer.appendChild(div); //appending the data in thr div element as a whole tr to add info to the table.
 
 //write a function for the append data.
-function appendData(data){
-//writing a function for data appending to the tr of a table.
+function appendData(data) {
+    //writing a function for data appending to the tr of a table.
 }
-
-

@@ -1,25 +1,65 @@
 <html>
-    <head>
-        <title>
-            Asset Management App | 
-        </title>
-        <link rel="stylesheet" href="../css/index.css">
-        <script src="../js/index.js"></script>
-    </head>
 
-    <body>
+<head>
+    <title>
+        Asset Management App |
+    </title>
+    <link rel="stylesheet" href="../css/index.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+    <script src="../js/index.js"></script>
+</head>
+
+<body>
+    <!-- <div id="display">
+        <div id="imagePanel"></div>
         <div id="input">
-            <input type="text" id="name" value="" placeholder="Asset Name">
-            <input type="text" id="class" placeholder="Asset Class">
-            <input type="date" id="AssetDate" placeholder="Date Acquired">
-            <input type="text" id="sku" placeholder="SKU">
-            <input type="text" id="description" placeholder="Description">
-        </div>
+            <h1> Please fill out the form below </h1>
+            <form method="POST" action="" name="basicForm" id="basicForm">
+                <input type="text" id="name" value="" placeholder="Asset Name">
+                <input type="text" id="class" placeholder="Asset Class">
+                <input type="date" id="AssetDate" placeholder="Date Acquired">
+                <input type="text" id="sku" placeholder="SKU">
+                <input type="text" id="description" placeholder="Description">
+            </form>
 
-        <div class="assetgroup">
-                <a href="./assets.html"><button id="asset">View Assets</button></a>
-                <button id="add" onclick="showMessage()"> Add Asset</button> 
+            <div class="btnGroup">
+                <a href="./assets.html"><button class="btn left">View Assets</button></a>
+                <a href=""><button class="btn right" onclick="showMessage()">Add Asset</button></a>
+            </div>
         </div>
-       
-    </body>
+    </div id="diplay"> -->
+
+    <div id="imagePanel">
+        <div id="topBorder"></div>
+        <div id="arrow">
+            <span id="invert" onclick="openModal()">^</span>
+        </div>
+        <p>Management</p>
+        <a href="./assets.html"><button id="viewBtn"> View Assets</button></a>
+    </div>
+
+
+
+    <div class="modal">
+        <div id="formpanel">
+            <span id="close" onclick="hideModal()">&times</span>
+            <h1> Please fill out the form below </h1>
+
+            <form method="POST" action="" name="basicForm" id="basicForm">
+                <input type="text" id="name" value="" placeholder="Asset Name">
+                <input type="text" id="class" placeholder="Asset Class">
+                <input type="date" id="AssetDate" placeholder="Date Acquired">
+                <input type="text" id="sku" placeholder="SKU">
+                <input type="text" id="description" placeholder="Description">
+                <input type="submit" id="send" value="Add Asset">
+            </form>
+
+
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+</body>
+
 </html>
