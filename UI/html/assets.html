@@ -1,58 +1,175 @@
 <html>
-    <head>
-        <title>
-Asset Management | Assets
-        </title>
-    <link rel="stylesheet" href="../css/assets.css">    </head>
-    <script src="../js/assets.js"></script>
 
-    <body>
-        <div class="back">
-            <h1 id="header">Asset Management Catalogue</h1>
-            <input type="search" placeholder="Search Asset Name" id="search">
-            <button id="search-btn">Search</button>
-    
-            <div>
-                <br> <!--Breaking space after search icon-->
-                <table style=" width:100%" class="table">
-                    <tr>  
-                        <th>Asset Name</th>
-                        <th>Class</th>
-                        <th>Stock Keeping Unit</th>
-                        <th>Description</th>
-                        <th>Asset Date</th>
-                    </tr>
-                    <tr>
-                        <td><div contenteditable="true">McLaren</div></td>
-                        <td><div contenteditable="true">Cars</div></td>
-                        <td><div contenteditable="true">30</div></td>  
-                        <td><div contenteditable="true">Cars</div></td>
-                        <td><div contenteditable="true">2019-08-30</div></td>
-                    </tr>
-    
-                    <tr>
-                        <td><div contenteditable="true">McLaren</div></td>
-                        <td><div contenteditable="true">Cars</div></td>
-                        <td><div contenteditable="true">30</div></td>  
-                        <td><div contenteditable="true">Cars</div></td> 
-                        <td> <div contenteditable="true">2019-08-30</div></td>
-                    </tr>
-    
-                    <tr>
-                        <td><div contenteditable="true" id="name">{{name}}</div></td>
-                        <td><div contenteditable="true" id="class">{{Cars}}</div></td>
-                        <td><div contenteditable="true" id="sku">{{SKU}}</div></td>  
-                        <td><div contenteditable="true" id="description">{{Description}}</div></td> 
-                        <td><div contenteditable="true" id="date">{{2019-08-30}}</div></td>
-                    </tr>
-                </table>   
-                <br>
-                <div class="btngroup">
-                        <button id="update">Update</button>
-                        <a href="./index.html"><button id="add">Add Asset</button></a>
-                </div>
+<head>
+    <title>
+        Asset Management | Assets
+    </title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/assets.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+</head>
+<script src="../js/assets.js"></script>
+
+<body>
+    <div class="container-fluid screen">
+        <div id="header" class="row">
+            <div class="col-12 text-center title">
+                <h1>Asset Management Catalogue</h1>
             </div>
         </div>
-        
-    </body>
+
+        <div class="row display">
+            <div id="sidePanel" class="col-3">
+                <div class="btnGroup">
+                    <button>Update</button>
+                    <a href="./index.html"><button id="linkBtn">Add Asset</button></a>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-9">
+                        <input type="search" placeholder="Search Asset" name="search" id="search">
+                    </div>
+
+                    <div class="col-3 noPadding">
+                        <span class="searchBtn fa-stack fa-lg">
+                                    <i class="fa fa-square fa-stack-2x"></i>
+                                    <i class="fa fa-search fa-stack-1x fa-inverse"></i>
+                                  </span>
+                        <!-- <span class="searchBtn fas fa-search"></!-->
+                    </div>
+                </div>
+            </div>
+
+            <div id="main" class="col-9">
+                <ul>
+                    <li>
+                        <div class="row display">
+                            <div class="col-4 display">
+                                <div class="row display2">
+                                    <div class="col-12 display font-weight-bolder">
+                                        McLaren
+                                    </div>
+                                </div>
+
+                                <div class="row display2">
+                                    <div class="col-4 text-left display">30</div>
+                                    <div class="col-4 text-center display">Cars</div>
+                                    <div class="col-4 text-center display">2019-08-30</div>
+                                </div>
+
+                            </div>
+
+                            <div class="col-8">
+                                First List item. Type of car, date of entry and number in inventory.
+                            </div>
+
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="row display">
+                            <div class="col-4 display">
+                                <div class="row display2">
+                                    <div class="col-12 display font-weight-bolder">
+                                        McLaren
+                                    </div>
+                                </div>
+
+                                <div class="row display2">
+                                    <div class="col-4 text-left display">30</div>
+                                    <div class="col-4 text-center display">Cars</div>
+                                    <div class="col-4 text-center display">2019-08-30</div>
+                                </div>
+
+                            </div>
+
+                            <div class="col-8">
+                                First List item. Type of car, date of entry and number in inventory.
+                            </div>
+
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="row display">
+                            <div class="col-4 display">
+                                <div class="row display2">
+                                    <div class="col-12 display font-weight-bolder">
+                                        McLaren
+                                    </div>
+                                </div>
+
+                                <div class="row display2">
+                                    <div class="col-4 text-left display">30</div>
+                                    <div class="col-4 text-center display">Cars</div>
+                                    <div class="col-4 text-center display">2019-08-30</div>
+                                </div>
+
+                            </div>
+
+                            <div class="col-8">
+                                First List item. Type of car, date of entry and number in inventory.
+                            </div>
+
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="row display">
+                            <div class="col-4 display">
+                                <div class="row display2">
+                                    <div class="col-12 display font-weight-bolder">
+                                        McLaren
+                                    </div>
+                                </div>
+
+                                <div class="row display2">
+                                    <div class="col-4 text-left display">30</div>
+                                    <div class="col-4 text-center display">Cars</div>
+                                    <div class="col-4 text-center display">2019-08-30</div>
+                                </div>
+
+                            </div>
+
+                            <div class="col-8">
+                                First List item. Type of car, date of entry and number in inventory.
+                            </div>
+
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="row display">
+                            <div class="col-4 display">
+                                <div class="row display2">
+                                    <div class="col-12 display font-weight-bolder">
+                                        McLaren
+                                    </div>
+                                </div>
+
+                                <div class="row display2">
+                                    <div class="col-4 text-left display">30</div>
+                                    <div class="col-4 text-center display">Cars</div>
+                                    <div class="col-4 text-center display">2019-08-30</div>
+                                </div>
+
+                            </div>
+
+                            <div class="col-8">
+                                First List item. Type of car, date of entry and number in inventory.
+                            </div>
+
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+
 </html>
